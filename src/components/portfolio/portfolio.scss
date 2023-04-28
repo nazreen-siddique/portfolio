@@ -1,0 +1,154 @@
+@import '../../global.scss';
+
+.portfolio {
+    background-color: whitesmoke;
+    width: 100vw;
+    height: calc(100vh - 70px);
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.portfolio>h1 {
+    font-size: 50px;
+
+    @include mobile {
+        font-size: 20px;
+    }
+
+}
+
+.portfolio>ul {
+    // font-size: 50px;
+    margin: 10px;
+    color: black;
+    padding: 0;
+    list-style: none;
+    display: flex;
+
+    @include mobile {
+        margin-right: 10px 0;
+        flex-wrap:wrap;
+        justify-content: center;
+      
+    }
+}
+
+.container {
+    // **********
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @include mobile {
+        width: 100%;
+    }
+}
+
+.container>.item1 {
+    width: 220px;
+    height: 150px;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: relative;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    overflow: hidden;
+    @include large {
+            width: 130px;
+            height: 100px;
+        }
+
+    
+
+}
+
+.container>.item1:hover {
+    box-shadow: 5px 7px #bdb4b4d4;
+}
+
+.container>.item1>.itemTitle {
+    position: absolute;
+    font-size: 20px;
+    top: 15px;
+
+    @include mobile {
+        font-size: 10px;
+    }
+
+}
+
+.container>.item1>.itemTitle:hover {
+    z-index: 2;
+    background-color: var(--main-color);
+    border-radius: 10px;
+    padding: 10px;
+
+    @include mobile {
+        font-size: 13px;
+        padding: 5px;
+    }
+}
+
+.container>.item1>.a1 {
+    position: absolute;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+@include mobile {
+        font-size: 15px;
+       
+    }
+}
+
+.container>.item1>.a2 {
+    position: absolute;
+    font-size: 22px;
+    color: white;
+    bottom: 25px;
+    text-decoration: none;
+
+    @include mobile {
+        font-size: 15px;
+        bottom: 15px
+    }
+
+}
+
+.container>.item1>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.container>.item1:hover {
+    background-color: var(--main-color);
+
+}
+
+.container>.item1>a:hover {
+    z-index: 2;
+    background-color: var(--main-color);
+    border-radius: 10px;
+    padding: 10px;
+
+    @include mobile {
+        font-size: 15px;
+        padding: 5px;
+    }
+
+}
+
+.container>.item1>img:hover {
+    opacity: 0.1;
+    z-index: 0
+}

@@ -1,0 +1,17 @@
+:root{
+  --main-color :#451F55
+}
+
+@mixin mobile {
+  @media (max-width :768px) {
+    @content
+  }
+};
+@mixin large {
+  @media (max-width :1120px) {
+    @content
+  }
+};
+
+
+
